@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ce7ugotcbmy0w"]
 
 [ext_resource type="Texture2D" uid="uid://b6iays3qfaf2i" path="res://assets/sprites/tank_body.png" id="1_ajt53"]
-[ext_resource type="Texture2D" uid="uid://bm3nvtlplnofg" path="res://assets/sprites/tank_weapon.png" id="2_vr6p3"]
+[ext_resource type="PackedScene" uid="uid://bci3je1srsky1" path="res://scenes/weapon.tscn" id="2_xi1cx"]
 
 [sub_resource type="Animation" id="Animation_0tr62"]
 resource_name = "idle"
@@ -71,11 +71,7 @@ libraries = {
 texture = ExtResource("1_ajt53")
 hframes = 2
 
-[node name="Weapon" type="Node2D" parent="."]
-
-[node name="WeaponSprite" type="Sprite2D" parent="Weapon"]
-texture = ExtResource("2_vr6p3")
-offset = Vector2(10, 0)
+[node name="Weapon" parent="." instance=ExtResource("2_xi1cx")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jstut")
