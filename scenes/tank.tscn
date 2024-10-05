@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce7ugotcbmy0w"]
+
+[ext_resource type="Texture2D" uid="uid://b6iays3qfaf2i" path="res://assets/sprites/tank_body.png" id="1_ajt53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jstut"]
+size = Vector2(30, 28)
+
+[node name="Tank" type="CharacterBody2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ajt53")
+hframes = 2
+
+[node name="Weapon" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jstut")
